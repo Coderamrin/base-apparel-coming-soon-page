@@ -4,22 +4,34 @@
     padding: 0;
     box-sizing: border-box;
     font-family: $JosefinSans; 
-}
+}  
 
-.main {
-    background: $GradientLight;   
-    display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: space-around;   
-    padding: 0 10rem; 
-    width: 60%;   
+.main { 
+    display: flex; 
+    &__left {
+        background: $GradientLight;   
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: space-around;   
+        padding: 0 10rem; 
+        width: 60%;   
 
-    &> * {
-        padding-bottom: 2rem; 
+        &> * {
+            padding-bottom: 2rem; 
+        }
+    }                        
+
+    &__right {  
+        width: 40%; 
+        height: 100vh; 
+        order: 10;   
+        img { 
+            height: 100%;   
+        } 
     }
 }
-
+ 
 // main--left
 .logo {
     padding-bottom: 5rem;  
@@ -62,6 +74,21 @@ form {
         color: #fff; 
         width: 20%;   
         background: $GradientBold;  
+    }
+}
+
+@media (max-width:1100px) {
+    .main {
+        flex-direction: column; 
+
+        &__left {
+            width: 100%; 
+        }
+
+        &__right {
+            width: 50%;  
+            margin: auto; 
+        }
     }
 }
 
