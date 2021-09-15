@@ -1,0 +1,67 @@
+// global styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $JosefinSans; 
+}
+
+.main {
+    background: $GradientLight;   
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: space-around;   
+    padding: 0 10rem; 
+    width: 60%;   
+
+    &> * {
+        padding-bottom: 2rem; 
+    }
+}
+
+// main--left
+.logo {
+    padding-bottom: 5rem;  
+}
+
+.title {
+    font-size: 5rem; 
+    text-transform: uppercase; 
+    letter-spacing: 10px;
+    color: $DarkGrayishRed;     
+
+    .light {
+        font-weight: 300; 
+        color: $DesaturatedRed;  
+    }
+}
+
+.description {
+    color: $DesaturatedRed; 
+    line-height: 1.5;   
+}
+
+form {
+    input {
+        border: none;  
+        outline: none;  
+        padding: 1rem; 
+        border-radius: 5rem;  
+    }
+
+    .email {
+        width: 80%; 
+        border: 1px solid $DesaturatedRed;   
+    }
+
+    .btn {
+        margin-left: -40px; 
+        font-size: 1.2rem; 
+        font-weight: bolder; 
+        color: #fff; 
+        width: 20%;   
+        background: $GradientBold;  
+    }
+}
+
